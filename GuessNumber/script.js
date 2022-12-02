@@ -1,6 +1,6 @@
 "use strict";
 
-const secret = 10;
+let secret = Math.round(Math.random() * 20);
 let currentScore = 20;
 document.querySelector(".score").textContent = currentScore;
 let highScore = 0;
@@ -46,6 +46,7 @@ document.querySelector(".check").addEventListener("click", function () {
 });
 
 document.querySelector(".again").addEventListener("click", function () {
+  let secret = Math.round(Math.random() * 20);
   currentScore = 20;
   document.querySelector(".score").textContent = currentScore;
   document.querySelector(".message").textContent = "Start guessing...";
